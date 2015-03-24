@@ -71,11 +71,12 @@ public class AudioProcessor {
 	public AudioProcessor(int sampleRate) {
 		mSampleRate = sampleRate;
 		
-		// these are same
+//		 these are same
 		int audioFormat = AudioFormat.ENCODING_PCM_16BIT;
 		numBytesPerSample = 2;
 		
-		mNumSamplesPerBuffer  = 512;
+		// around 100 ms
+		mNumSamplesPerBuffer = (int)Math.round(sampleRate * 0.1);
 		
 		// in bytes 
 		int minBufferSize =  AudioRecord.getMinBufferSize(mSampleRate, AudioFormat.CHANNEL_IN_MONO, audioFormat);
@@ -121,13 +122,12 @@ public class AudioProcessor {
 	      }
 		
 		
-mRecorder.startRecording();
+		 mRecorder.startRecording();
 		
 //		PipedInputStream audioReadStream = new PipedInputStream();
 //		try {
 //			mAudioWriter.connect(audioReadStream);
 //		} catch (IOException e) {
-//			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
 

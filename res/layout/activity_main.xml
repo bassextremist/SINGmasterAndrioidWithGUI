@@ -46,6 +46,12 @@
                 style="@style/GeneralText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/processing" />
+
+            <TextView
+                style="@style/GeneralText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_toLeftOf="@id/skb_tempo"
                 android:text="@string/tempo_label"
                 android:layout_centerVertical="true"
@@ -186,13 +192,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1" />
-                
+                
                 <ImageButton
-				    android:id="@+id/btn_playSynth_0"
-				    style="@style/Numbers"
-				    android:layout_width="match_parent"
-				    android:layout_height="match_parent"
-				    android:background="@drawable/play_icon" />
+                    android:id="@+id/btn_playSynth_0"
+                    style="@style/Numbers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/play_icon" />
                 
                 <TextView
                     android:id="@+id/note_1"
